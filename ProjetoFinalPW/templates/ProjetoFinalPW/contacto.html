@@ -1,0 +1,71 @@
+{% extends 'ProjetoFinalPW/base.html' %}
+
+{% load static %}
+
+{% block head %}
+    <style>
+        .parallax {
+            background-image: url('{% static "ProjetoFinalPW/images/contacto.png"%}');
+            min-height: 500px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h1{
+            font-size: 2vw;
+            font-family: 'Dela Gothic One', cursive;
+            color:rgb(202, 29, 29);
+        }
+        p{
+            text-align: center;
+        }
+        .nav{
+            background-color:rgb(10, 51, 90);
+        }
+        .footer{
+            background-color:rgb(10, 51, 90);
+        }
+        fieldset{
+            text-align: center;
+        }
+    </style>
+{% endblock head %}
+
+{% block body %}
+    <div class="parallax"></div>
+{% endblock body %}
+
+{% block header %}
+    <h1>Ficha de Contacto</h1>
+{% endblock header %}
+
+{% block nav %}
+    <a href="{% url 'ProjetoFinalPW:informacao' %}" target="_blank">&#10067; Informações </a>
+    <a href="{% url 'ProjetoFinalPW:formulario' %}" target="_blank">&#128203; Formulário </a>
+    <a href="{% url 'ProjetoFinalPW:mapa' %}" target="_blank">🗺️ Mapa do Website</a>
+    <b><a href="{% url 'ProjetoFinalPW:contacto' %}">📞 Contacto </a></b>
+    <a href="{% url 'quizz:quizz' %}">✍️ Quizz </a>
+    <a href="{% url 'ProjetoFinalPW:index' %}" target="_blank">&#128281; Home </a>
+{% endblock nav %}
+
+
+{% block main %}
+    {% if user.is_authenticated %}
+        {% for usuario in usuarios %}
+        <p>
+            <a href="{% url 'ProjetoFinalPW:edita' usuario.id %}" class="btn btn-warning  btn-sm" style="float: right; margin-right: 10px">
+                Editar
+            </a>
+        </p>
+        {% endfor %}
+         <a href="{% url 'ProjetoFinalPW:listar' %}" class="btn btn-success btn-block"> Novo Contacto</a>
+    {% else %}
+        <p> Primeiro tem de se registar!</p>
+    {% endif %}
+
+{% endblock main %}
+
+{% block body2 %}
+    <div class="parallax"></div>
+{% endblock body2 %}

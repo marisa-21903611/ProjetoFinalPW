@@ -1,0 +1,118 @@
+{% extends 'ProjetoFinalPW/base.html' %}
+
+{% load static %}
+
+{% block head %}
+    <style>
+        .parallax {
+            background-image: url('{% static "ProjetoFinalPW/images/capa.jpeg" %}');
+            min-height: 500px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h1{
+            font-size: 4vw;
+            font-family: 'Dela Gothic One', cursive;
+        }
+        h2{
+            font-size:1.5vw;
+            font-family: 'New Tegomin', serif;
+        }
+        .footer{
+            background-color:rgb(31, 95, 138) ;
+        }
+        /*Menu Dropdown Responsivo*/
+        nav ul {
+            display: inline;
+        }
+        nav ul a{
+            display: inline-block;
+            padding: 3px 1px 3px 2px;
+            text-decoration: none;
+            color: #FFF;
+        }
+        nav li{
+            display: inline-block;
+            position: relative;
+        }
+        nav a {
+            display: inline-block;
+            padding: 5px 30px;
+            width: 200px;
+            height: 100%;
+            text-decoration: none;
+            color: white;
+            background-color: rgb(31, 95, 138);
+        }
+        nav ul a :hover{
+            color: #000;
+            background-color:#69C;
+        }
+        nav > ul > li ul {display: none;}
+        nav > ul li:hover > ul {
+            display:block;
+            position: absolute;
+            top: 100%;
+            left: 0%;
+        }
+    </style>
+{% endblock head %}
+
+{% block body %}
+    <div class="parallax"></div>
+{% endblock body %}
+
+{% block nav %}
+    <nav style="text-align: center;">
+        <ul>
+            <li><a href="#"> &#10024; Mirazur</a>
+                <ul>
+                    <li><a  href="{% url 'ProjetoFinalPW:mirazurIntroducao' %}" > Apresentação </a></li>
+                    <li><a href="{% url 'ProjetoFinalPW:mirazurPinteresse' %}"> Pontos de Interesse </a></li>
+                    <li><a href="{% url 'ProjetoFinalPW:mirazurCozinha' %}"> Cozinha </a></li>
+                </ul>
+            </li>
+            <li><a href="#" style="width: 300px;"> &#10024; El Celler De Can Roca</a>
+                <ul>
+                    <li><a  href="{% url 'ProjetoFinalPW:cellerIntroducao' %}" > Apresentação </a></li>
+                    <li><a href="{% url 'ProjetoFinalPW:cellerPinteresse' %}"> Pontos de Interesse </a></li>
+                    <li><a href="{% url 'ProjetoFinalPW:cellerCozinha' %}"> Cozinha </a></li>
+                </ul>
+            </li>
+            <li><a href="#"> &#10024; Noma</a>
+                <ul>
+                    <li><a  href="{% url 'ProjetoFinalPW:nomaIntroducao' %}" > Apresentação </a></li>
+                    <li><a href="{% url 'ProjetoFinalPW:nomaPinteresse' %}"> Pontos de Interesse </a></li>
+                    <li><a href="{% url 'ProjetoFinalPW:nomaCozinha' %}"> Cozinha </a></li>
+                </ul>
+            </li>
+            <li><a href="#" style="width: 300px;">&#10133; Detalhes do Projeto</a>
+                <ul>
+                      <li><a href="{% url 'ProjetoFinalPW:informacao' %}">Informações</a></li>
+                      <li><a href="{% url 'ProjetoFinalPW:mapa' %}"> Mapa do Website </a></li>
+                </ul>
+            </li>
+            <li><a href="{% url 'ProjetoFinalPW:formulario' %}">&#128203; Formulário</a></li>
+            <li><a href="{% url 'ProjetoFinalPW:contacto' %}"> Contacto </a></li>
+            <li><a href="{% url 'quizz:quizz' %}"> Quizz </a></li>
+
+        </ul>
+    </nav>
+{% endblock nav %}
+
+{% block header %}
+    <div class="item1">
+        <br><br><br><br>
+    </div>
+{% endblock header %}
+
+{% block article %}
+     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+{% endblock article %}
+
+{% block body2 %}
+    <div class="parallax"></div>
+{% endblock body2 %}

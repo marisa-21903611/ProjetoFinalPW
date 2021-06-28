@@ -1,0 +1,115 @@
+{% extends "ProjetoFinalPW/base.html" %}
+
+{% load static %}
+
+{% block head %}
+    <style>
+        .parallax {
+            background-image: url('{% static "ProjetoFinalPW/images/fundo.jpg" %}');
+            min-height: 500px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h1{
+            font-size: 2vw;
+            font-family: 'Dela Gothic One', cursive;
+            color:rgb(10, 51, 90);
+        }
+        h2{
+            font-size:1.5vw;
+            font-family: 'New Tegomin', serif;
+            background-color: rgb(179, 206, 245);
+            color: rgb(58, 57, 57);
+        }
+        h3{
+            color:rgb(29, 46, 77);
+            text-align: center;
+        }
+        .nav{
+            background-color:rgb(10, 51, 90);
+        }
+        .footer{
+            background-color:rgb(10, 51, 90);
+        }
+        /*Menu Dropdown*/
+        html, body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul{
+            margin-left: 0;
+            padding-left: 0;
+            list-style-type: none;
+            display: inline-block;
+            width: 100%;
+        }
+    </style>
+{% endblock head %}
+
+{% block body %}
+    <div class="parallax"></div>
+{% endblock body %}
+
+     <!--Nav-->
+{% block nav %}
+    <a href="{% url 'ProjetoFinalPW:informacao' %}" target="_blank">&#10067; Informações </a>
+    <a href="{% url 'ProjetoFinalPW:formulario' %}" target="_blank">&#128203; Formulário </a>
+    <b><a href="{% url 'ProjetoFinalPW:mapa' %}" target="_blank">🗺️ Mapa do Website</a></b>
+    <a href="{% url 'ProjetoFinalPW:contacto' %}">📞 Contacto </a>
+    <!--<a href="{% url 'quizz:quizz' %}">✍️ Quizz </a>-->
+    <a href="{% url 'ProjetoFinalPW:index' %}" target="_blank">&#128281; Home </a>
+{% endblock nav %}
+
+
+    <!--Header-->
+{% block header %}
+    <h1>Mapa do Website</h1>
+{% endblock header %}
+
+        <!--Main-->
+{% block main %}
+    <main style="min-width: 50vw">
+        <ul>
+            <li><a href="#"> Mirazur</a>
+                <ul>
+                    <li><a  href="{% url 'ProjetoFinalPW:mirazurIntroducao' %}" > Apresentação </a></li>
+                    <li><a href="{% url 'ProjetoFinalPW:mirazurPinteresse' %}"> Pontos de Interesse </a></li>
+                    <li><a href="{% url 'ProjetoFinalPW:mirazurCozinha' %}"> Cozinha </a></li>
+                    <li><a href="{% url 'ProjetoFinalPW:index' %}"></a> Home </li>
+                </ul>
+            </li>
+            <li><a href="#"> El Celler De Can Roca</a>
+                <ul>
+                    <li><a  href="{% url 'ProjetoFinalPW:cellerIntroducao' %}" > Apresentação </a></li>
+                    <li><a href="{% url 'ProjetoFinalPW:cellerPinteresse' %}"> Pontos de Interesse </a></li>
+                    <li><a href="{% url 'ProjetoFinalPW:cellerCozinha' %}"> Cozinha </a></li>
+                    <li><a href="{% url 'ProjetoFinalPW:index' %}"></a> Home </li>
+                </ul>
+            </li>
+            <li><a href="#"> Noma</a>
+                <ul>
+                   <li><a  href="{% url 'ProjetoFinalPW:nomaIntroducao' %}" > Apresentação </a></li>
+                    <li><a href="{% url 'ProjetoFinalPW:nomaPinteresse' %}"> Pontos de Interesse </a></li>
+                    <li><a href="{% url 'ProjetoFinalPW:nomaCozinha' %}"> Cozinha </a></li>
+                    <li><a href="{% url 'ProjetoFinalPW:index' %}"></a> Home </li>
+                </ul>
+            </li>
+            <li><a href="#"> Detalhes do Projeto</a>
+                <ul>
+                    <li><a href="{% url 'ProjetoFinalPW:informacao' %}">Informações</a></li>
+                    <li><a href="{% url 'ProjetoFinalPW:mapa' %}"> Mapa do Website </a></li>
+                </ul>
+            </li>
+            <li><a href="{% url 'ProjetoFinalPW:formulario' %}">&#128203; Formulário</a></li>
+            <li><a href="{% url 'ProjetoFinalPW:contacto' %}"> Contacto </a></li>
+            <li><a href="{% url 'ProjetoFinalPW:quizz' %}"> Quizz </a></li>
+        </ul>
+    </main>
+{% endblock main %}
+
+{% block body2 %}
+    <div class="parallax"></div>
+{% endblock body2 %}
