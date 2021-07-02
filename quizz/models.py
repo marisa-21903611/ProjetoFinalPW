@@ -7,8 +7,8 @@ class Resposta(models.Model):
     correta = models.BooleanField(default=False)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
-    def str(self):
-        return self.textoResposta
+    def __str__(self):
+        return f"{self.textoResposta}"
 
 class Pergunta(models.Model):
     textoPergunta = models.CharField(max_length=200)
@@ -16,8 +16,8 @@ class Pergunta(models.Model):
     pontos = models.PositiveIntegerField()
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
-    def str(self):
-        return self.textoPergunta
+    def __str__(self):
+        return f"{self.textoPergunta}"
 
 class Quizz (models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -28,8 +28,8 @@ class Quizz (models.Model):
     tempo = models.PositiveIntegerField()
     perguntas = models.ManyToManyField(Pergunta)
 
-    def str(self):
-        return self.tituloPergunta
+    def __str__(self):
+        return f"{self.tituloPergunta}"
 
 
 class Tentativa(models.Model):
@@ -39,4 +39,4 @@ class Tentativa(models.Model):
     resposta = models.ForeignKey(Resposta, on_delete=models.CASCADE)
 
     def str(self):
-        return self.usuario.user.username + ' - ' + self.resposta.textoResposta
+        return f"{self.usuario.user.username + ' - ' + self.resposta.textoResposta}"

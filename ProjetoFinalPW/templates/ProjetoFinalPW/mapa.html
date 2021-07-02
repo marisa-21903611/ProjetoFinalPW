@@ -59,7 +59,7 @@
     <a href="{% url 'ProjetoFinalPW:formulario' %}" target="_blank">&#128203; Formulário </a>
     <b><a href="{% url 'ProjetoFinalPW:mapa' %}" target="_blank">🗺️ Mapa do Website</a></b>
     <a href="{% url 'ProjetoFinalPW:contacto' %}">📞 Contacto </a>
-    <!--<a href="{% url 'quizz:quizz' %}">✍️ Quizz </a>-->
+    <a href="{% url 'quizz:quizz' %}">✍️ Quizz </a>
     <a href="{% url 'ProjetoFinalPW:index' %}" target="_blank">&#128281; Home </a>
 {% endblock nav %}
 
@@ -78,7 +78,7 @@
                     <li><a  href="{% url 'ProjetoFinalPW:mirazurIntroducao' %}" > Apresentação </a></li>
                     <li><a href="{% url 'ProjetoFinalPW:mirazurPinteresse' %}"> Pontos de Interesse </a></li>
                     <li><a href="{% url 'ProjetoFinalPW:mirazurCozinha' %}"> Cozinha </a></li>
-                    <li><a href="{% url 'ProjetoFinalPW:index' %}"></a> Home </li>
+                    <li><a href="{% url 'ProjetoFinalPW:index' %}"> Home</a></li>
                 </ul>
             </li>
             <li><a href="#"> El Celler De Can Roca</a>
@@ -86,7 +86,7 @@
                     <li><a  href="{% url 'ProjetoFinalPW:cellerIntroducao' %}" > Apresentação </a></li>
                     <li><a href="{% url 'ProjetoFinalPW:cellerPinteresse' %}"> Pontos de Interesse </a></li>
                     <li><a href="{% url 'ProjetoFinalPW:cellerCozinha' %}"> Cozinha </a></li>
-                    <li><a href="{% url 'ProjetoFinalPW:index' %}"></a> Home </li>
+                    <li><a href="{% url 'ProjetoFinalPW:index' %}"> Home</a></li>
                 </ul>
             </li>
             <li><a href="#"> Noma</a>
@@ -94,7 +94,7 @@
                    <li><a  href="{% url 'ProjetoFinalPW:nomaIntroducao' %}" > Apresentação </a></li>
                     <li><a href="{% url 'ProjetoFinalPW:nomaPinteresse' %}"> Pontos de Interesse </a></li>
                     <li><a href="{% url 'ProjetoFinalPW:nomaCozinha' %}"> Cozinha </a></li>
-                    <li><a href="{% url 'ProjetoFinalPW:index' %}"></a> Home </li>
+                    <li><a href="{% url 'ProjetoFinalPW:index' %}"> Home</a></li>
                 </ul>
             </li>
             <li><a href="#"> Detalhes do Projeto</a>
@@ -103,9 +103,20 @@
                     <li><a href="{% url 'ProjetoFinalPW:mapa' %}"> Mapa do Website </a></li>
                 </ul>
             </li>
-            <li><a href="{% url 'ProjetoFinalPW:formulario' %}">&#128203; Formulário</a></li>
-            <li><a href="{% url 'ProjetoFinalPW:contacto' %}"> Contacto </a></li>
-            <li><a href="{% url 'ProjetoFinalPW:quizz' %}"> Quizz </a></li>
+            <li><a href="#">Detalhes do Contacto</a>
+                <ul>
+                    <li><a href="{% url 'ProjetoFinalPW:contacto' %}"> Contacto </a></li>
+                    <li><a href="{% url 'ProjetoFinalPW:listar' %}"> Lista Contacto </a></li>
+                </ul>
+            </li>
+            <li><a href="#">Detalhes do Quizz</a>
+                <ul>
+                    <li><a href="{% url 'quizz:quizz' %}">Quizz</a></li>
+                    <li><a href="{% url 'quizz:pontuacao' %}"> Pontuacao </a></li>
+                </ul>
+            </li>
+            <li><a href="{% url 'ProjetoFinalPW:formulario' %}">Formulário</a></li>
+            <li><a href="{% url 'ProjetoFinalPW:index' %}"> Home</a></li>
         </ul>
     </main>
 {% endblock main %}

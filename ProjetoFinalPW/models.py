@@ -8,5 +8,5 @@ class Usuario(models.Model):
     email = models.EmailField(null=False)
     dataNascimento = models.DateTimeField(null=False)
 
-    def str(self):
+    def __str__(self):
         return f"{self.nome} {self.apelido} {self.telefone} {self.email} {self.dataNascimento}"
