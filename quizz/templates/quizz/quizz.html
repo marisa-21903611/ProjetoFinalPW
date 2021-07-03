@@ -49,6 +49,7 @@
 
 
 {% block main %}
+
     {% if user.is_authenticated %}
         <h2> {{ quizz.0.titulo }}</h2>
 
@@ -68,7 +69,11 @@
                            {% else %}
                                 value = "0"
                            {% endif%}
-                                type="radio" style="margin-right: 10%">
+                                count = 1
+                                type="radio" style="margin-right: 5%">
+                                {% if count.isequal == 1 %}
+                                    <input type="radio" style="margin-right: 10%">
+                                {% endif %}
                     {{ resposta.textoResposta}}
                     </div>
                 {% endfor %}

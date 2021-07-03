@@ -52,6 +52,16 @@
         }
     </style>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('button').forEach(button => {
+                button.onclick = () => {
+                    document.querySelector('#info').style.color = button.dataset.color;
+                }
+            })
+        });
+    </script>
+
 {% endblock head %}
 
 {% block body %}
@@ -107,6 +117,15 @@
           <a href="#main">Clique aqui</a>
 
           </div>
+    </div>
+
+    <br>
+
+    <div style="text-align: center">
+        <i><h1 id="info" style="font-size: 2vw; font-family: 'New Tegomin', serif;">Conheça connosco um dos Melhores Restaurantes do Mundo!</h1></i>
+        <button data-color="green" >Verde</button>
+        <button data-color="orange">Laranja</button>
+        <button data-color="blue">Azul</button>
     </div>
 {% endblock itemAuxiliar %}
 

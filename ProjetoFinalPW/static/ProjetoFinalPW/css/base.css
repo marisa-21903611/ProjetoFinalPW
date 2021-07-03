@@ -640,7 +640,7 @@ flex-wrap: wrap;
   }
 
   .quizz-container{
-      margin: auto;
+      margin-right: 10%;
       align-content: center;
       justify-content: center;
       display: grid;

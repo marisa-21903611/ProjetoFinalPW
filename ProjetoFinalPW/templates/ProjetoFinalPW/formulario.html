@@ -30,6 +30,21 @@
             text-align: center;
         }
     </style>
+
+    <script>
+        function info() {
+            const heading = document.querySelector('h1');
+            if(heading.innerHTML === 'Conselho') {
+                heading.innerHTML = 'Preencha o formulário com boa disposição &#128518;!';
+                heading.style.color = 'green';
+            } else {
+                heading.innerHTML = 'Conselho';
+                heading.style.color = 'orange';
+            }
+
+        }
+    </script>
+
 {% endblock head %}
 
 {% block body %}
@@ -49,6 +64,7 @@
     <!--Header-->
 {% block header %}
     <h1><b>Formulário</b></h1>
+    <button onclick="info()">Clicar aqui!</button>
 {% endblock header %}
 
         <!--Conteúdo Principal // Main-->
