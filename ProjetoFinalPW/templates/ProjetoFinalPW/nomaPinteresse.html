@@ -60,6 +60,9 @@
         #half_circulo{
         border-radius: 50px;
         }
+        .itemAuxiliar{
+            text-align: center;
+        }
     </style>
 {% endblock head %}
 
@@ -81,7 +84,8 @@
     {% endblock header %}
 
     <!--Item Auxiliar-->
-    {% block itemAuxiliar %}
+{% block itemAuxiliar %}
+    <div class="itemAuxiliar">
         <div class="row1" style="text-align: justify;">
           <div class="columnPInteresse" style="background-color: rgb(190, 167, 131);">
           <br>
@@ -89,7 +93,8 @@
           <br>
           </div>
         </div>
-    {% endblock itemAuxiliar%}
+    </div>
+{% endblock itemAuxiliar%}
 
         <!--Conteúdo Principal // Main-->
     {% block main %}
