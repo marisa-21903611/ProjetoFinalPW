@@ -21,4 +21,5 @@ urlpatterns = [
     path('users/', include('users.urls')),
     path('', include('ProjetoFinalPW.urls')),
     path('quizz/', include('quizz.urls')),
+    path('singlepage/', include('singlepage.urls')),
 ]

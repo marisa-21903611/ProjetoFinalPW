@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'ProjetoFinalPW',
     'users',
     'quizz',
+    'singlepage',
 
 ]
 
