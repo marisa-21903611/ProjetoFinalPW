@@ -1,8 +1,14 @@
-{% extends 'ProjetoFinalPW/base.html' %}
+<!DOCTYPE html>
+<html lang="pt">
 
 {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Gastronomia no Mundo</title>
+    <link rel="shortcut icon" type="image/x-icon" href="imagens/mundo.png"/>
+    <link href="{% static 'fontawesome_free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'ProjetoFinalPW/css/base.css' %}">
 
-{% block head %}
     <style>
         .parallax {
             background-image: url('{% static "ProjetoFinalPW/images/capa.jpeg" %}');
@@ -58,14 +64,11 @@
             left: 0%;
         }
     </style>
-{% endblock head %}
+</head>
 
-{% block body %}
-    <div class="parallax"></div>
-{% endblock body %}
-
-{% block nav %}
-    <nav style="text-align: center;">
+<body>
+    <div class="parallax">
+        <nav style="text-align: center;">
         <ul>
             <li><a href="#"> &#10024; Mirazur</a>
                 <ul>
@@ -88,6 +91,7 @@
                     <li><a href="{% url 'ProjetoFinalPW:nomaCozinha' %}"> Cozinha </a></li>
                 </ul>
             </li>
+            <li><a href="{% url 'singlepage:index' %}"> Mais Restaurantes </a></li>
             <li><a href="#" style="width: 300px;">&#10133; Detalhes do Projeto</a>
                 <ul>
                       <li><a href="{% url 'ProjetoFinalPW:informacao' %}">Informações</a></li>
@@ -100,19 +104,31 @@
 
         </ul>
     </nav>
-{% endblock nav %}
 
-{% block header %}
+    <!--Header-->
     <div class="item1">
-        <br><br><br><br>
+        <header>
+            <br><br><br><br>
+        </header>
     </div>
-{% endblock header %}
 
-{% block article %}
-     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br>
-{% endblock article %}
+    <!--Article-->
 
-{% block body2 %}
-    <div class="parallax"></div>
-{% endblock body2 %}
+    <div class="article">
+            <article>
+             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+             <br><br><br><br><br><br><br><br><br><br><br><br>
+            </article>
+    </div>
+
+
+    </div>
+   <!--Footer-->
+
+    <div class="footer">
+        <footer>
+            <p> Universade Lusófona de Humanidades e Tecnologias </p>
+        </footer>
+    </div>
+</body>
+</html>
