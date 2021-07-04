@@ -56,12 +56,12 @@
 
      <!--Nav-->
 {% block nav %}
-    <a href="{% url 'ProjetoFinalPW:informacao' %}" target="_blank">&#10067; Informações </a>
-    <b><a href="{% url 'ProjetoFinalPW:formulario' %}" target="_blank">&#128203; Formulário </a></b>
-    <a href="{% url 'ProjetoFinalPW:mapa' %}" target="_blank">🗺️ Mapa do Website</a>
+    <a href="{% url 'ProjetoFinalPW:informacao' %}" >&#10067; Informações </a>
+    <b><a href="{% url 'ProjetoFinalPW:formulario' %}" >&#128203; Formulário </a></b>
+    <a href="{% url 'ProjetoFinalPW:mapa' %}" >🗺️ Mapa do Website</a>
     <a href="{% url 'ProjetoFinalPW:contacto' %}">📞 Contacto </a>
     <a href="{% url 'quizz:quizz' %}">✍️ Quizz </a>
-    <a href="{% url 'ProjetoFinalPW:index' %}" target="_blank">&#128281; Home </a>
+    <a href="{% url 'ProjetoFinalPW:index' %}" >&#128281; Home </a>
 {% endblock nav %}
 
     <!--Header-->
@@ -74,7 +74,7 @@
 {% block main %}
     <p>Responda às várias perguntas, sempre com sinceridade!!</p>
     <p>As opiniões são sempre bem-vindas!</p>
-      <form action="nome.apelido@gmail.com" method="POST">
+      <form action="{% url 'ProjetoFinalPW:formulario' %}" method="POST">
         <div class="feedback-container">
             {% csrf_token %}
 

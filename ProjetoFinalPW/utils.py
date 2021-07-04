@@ -18,8 +18,8 @@ def get_plot(primeira,segunda):
     plt.title('Média das Avaliações do Site')
     plt.plot(primeira, segunda)
     plt.xticks(rotation=45)
-    plt.primeiralabel('Tema')
-    plt.segundalabel('Cotação')
+    plt.xlabel('Tema')
+    plt.ylabel('Cotação')
     plt.tight_layout()
     grafico = get_grafico()
     return grafico

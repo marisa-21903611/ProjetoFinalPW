@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 psycopg2-binary = "==2.8.6"
+gunicorn = "*"
 
 [dev-packages]
 
