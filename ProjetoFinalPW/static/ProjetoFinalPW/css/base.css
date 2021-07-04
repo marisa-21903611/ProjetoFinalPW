@@ -650,3 +650,25 @@ flex-wrap: wrap;
       gap: 30px 30px;
       grid-template-areas: "resposta1 resposta2 resposta3";
   }
+
+  .comentario-container {
+      justify-content: center;
+      display: grid;
+      grid-template-columns: 150px 150px ;
+      grid-template-rows: 50px 50px 50px 50px;
+      gap: 15px 15px;
+      grid-template-areas:
+        "label input"
+        " label input "
+        " label input "
+        " label input";
+    }
+
+    .feedback-container {
+        display: grid;
+        grid-template-columns: 50%;
+        grid-gap: 10px;
+        padding: 10px;
+        justify-content: center;
+        grid-template-areas: 'opiniao';
+    }

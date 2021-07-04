@@ -2,9 +2,8 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
 
-from .models import Usuario
-from .forms import UsuarioFormulario
-#from .forms QuizzFormulario, PerguntaFormulario
+from .models import Usuario, Comentario
+from .forms import UsuarioFormulario, ComentarioFormulario
 
 from django.views.generic import ListView
 
@@ -22,7 +21,13 @@ def informcao_page_view(request):
 
 # Formulário
 def formulario_page_view(request):
-    return render(request, 'ProjetoFinalPW/formulario.html')
+    form = ComentarioFormulario(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect(reverse('formulario'))
+    context = {'form': form}
+
+    return render(request, 'ProjetoFinalPW/formulario.html',context)
 
 
 # Index

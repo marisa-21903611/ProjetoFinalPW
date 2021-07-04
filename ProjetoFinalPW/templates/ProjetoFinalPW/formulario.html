@@ -69,85 +69,20 @@
 
         <!--Conteúdo Principal // Main-->
 {% block main %}
-    <form autocomplete="off" method="POST" action="nome.apelido@gmail.com">
+    <p>Responda às várias perguntas, sempre com sinceridade!!</p>
+    <p>As opiniões são sempre bem-vindas!</p>
+      <form action="nome.apelido@gmail.com" method="POST">
+        <div class="feedback-container">
+            {% csrf_token %}
 
-    <p><b>Ajude-nos a perceber o que melhorar!! &#9997;</b></p>
+            <div class="comentario-container">
+                {{form.as_p}}
 
-
-    <fieldset>
-        <legend>Dados Pessoais</legend>
-        <span><div class="First_test"><label for="fname">Nome:</label></div></span>
-        <input type="text" id="fname" name="fname" placeholder="XXXXXXXX" size="50">
-        <span><div class="Second_test"><label for="lname">Apelido:</label></div></span>
-        <input type="text" id="lname" name="lname" placeholder="XXXXXXX" size="50">
-        <span><div class="Three_test"><label for="email">Email:</label></div></span>
-        <input for="email" id="email" name="email" placeholder="nomeutilizador@gmail.com" size="50">
-        <span><div class="Four_test"><label type="phone">Número de telemóvel:</label></div></span>
-        <input type="tel" id="phone" placeholder="121 345 678" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}">
-    </fieldset>
-    <br><br>
-
-    <fieldset>
-        <legend>Questões</legend>
-        <span><label for="clareza">Como classifica o nosso website quanto à clareza?</label></span>
-        <input type="range" id="clareza" name="clareza" min="0" max="100">
-        <br><br>
-
-        <span><label for="rigor">Como classifica o nosso website quanto ao rigor?</label></span>
-        <input type="range" id="rigor" name="rigor" min="0" max="100">
-        <br><br>
-
-        <span><label for="profundidade">Como classifica o nosso website quanto à profundidade?</label></span><br><br>
-        <input type="checkbox" id="Avaliar" name="Avaliar" value="Pessimo">
-        <label for="Pessimo">Péssimo</label>
-        <input type="checkbox" id="Avaliar" name="Avaliar" value="Medio">
-        <label for="Medio">Médio</label>
-        <input type="checkbox" id="Avaliar" name="Avaliar" value="Bom">
-        <label for="Bom">Bom</label>
-        <input type="checkbox" id="Avaliar" name="Avaliar" value="Muito Bom">
-        <label for="Muito Bom">Muito Bom</label>
-        <br><br>
-
-        <span><label for="amplitude">Como classifica o nosso website quanto ao seu layout?</label></span>
-        <input type="range" id="amplitude" name="amplitude" min="0" max="100">
-        <br><br>
-
-        <span><label for="logica">Como classifica o nosso website quanto à lógica?</label></span>
-        <input type="range" id="logica" name="logica" min="0" max="100">
-        <br><br>
-
-        <span><label for="significancia">Como classifica o nosso website quanto à estrutura?</label></span>
-        <input type="range" id="significancia" name="significancia" min="0" max="100">
-        <br><br>
-
-        <span><label for="originalidade">Como classifica o nosso website quanto à originalidade?</label></span><br><br>
-        <input type="radio" id="Pessimo" name="gender" value="Pessimo">
-        <label for="Pessimo">Péssimo</label>
-        <input type="radio" id="Medio" name="gender" value="Medio">
-        <label for="Medio">Médio</label>
-        <input type="radio" id="Bom" name="gender" value="Bom">
-        <label for="Bom">Bom</label>
-        <input type="radio" id="Muito Bom" name="gender" value="Muito Bom">
-        <label for="Muito Bom">Muito Bom</label>
-        <br><br>
-
-        <span><label for="significancia">Como classifica o nosso website quanto às cores?</label></span>
-        <input type="range" id="significancia" name="significancia" min="0" max="100">
-        <br><br>
-
-        <span><label for="significancia">Como classifica o nosso website quanto às animações?</label></span>
-        <input type="range" id="significancia" name="significancia" min="0" max="100">
-        <br><br>
-
-        <span><p>Sugestões de Melhoria:</p></span>
-        <textarea name="message" rows="3" cols="50">Escreve aqui...</textarea>
-        <br><br>
-        <input type="hidden" id="lab3" name="lab3" value="100">
-
-        <button type="button" onclick="alert('Submetido')">Submeter</button>
-
-    </fieldset>
-    </form>
+                <p></p>
+                <input class ="butao" type="submit" value="Enviar">
+            </div>
+        </div>
+      </form>
 {% endblock main %}
 
 {% block body2 %}
