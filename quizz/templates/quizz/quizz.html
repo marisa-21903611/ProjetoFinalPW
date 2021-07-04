@@ -88,6 +88,10 @@
         <h2> Para aceder ao quizz, necessita de fazer o login.</h2>
         <p> Conta: marisa</p>
         <p> Password: 1234</p>
+
+        <div class ="botao" style="margin-top: 25px">
+            <a href="{% url 'users:login' %}" class="btn btn-success btn-block"> Login</a>
+        </div>
     {% endif %}
 {% endblock main %}
 
