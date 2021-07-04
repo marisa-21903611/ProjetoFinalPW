@@ -37,6 +37,8 @@ class Tentativa(models.Model):
     usuario = models.ForeignKey(User, on_delete=models.CASCADE)
     pergunta = models.ForeignKey(Pergunta, on_delete=models.CASCADE)
     resposta = models.ForeignKey(Resposta, on_delete=models.CASCADE)
+    classificacao = models.PositiveIntegerField(default=0)
+    submetido = models.DateTimeField(auto_now_add=True)
 
     def str(self):
         return f"{self.usuario.user.username + ' - ' + self.resposta.textoResposta}"

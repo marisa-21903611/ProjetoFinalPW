@@ -69,6 +69,12 @@
         .itemAuxiliar{
             text-align: center;
         }
+         main{
+            text-align: center;
+        }
+         aside,summary{
+             text-align: center;
+         }
     </style>
 {% endblock head%}
 
@@ -95,7 +101,7 @@
     <div class="row1">
       <div class="columnPagina" style="background-color: rgb(190, 167, 131);">
             <br>
-            <i class="fa fa-video-camera" style="font-size:4vw;color:rgb(238, 238, 238)"></i>
+             <h2>🎥</h2>
             <br>
             <h3>Vídeos do Chefe</h3>
             <a href="#section">Clique aqui</a>
@@ -103,7 +109,7 @@
 
       <div class="columnPagina" style="background-color:rgb(131, 115, 89)">
             <br>
-            <i class="fa fa-cutlery" style="font-size:4vw;color: rgb(238, 238, 238);"></i>
+            <h2>🍽️</h2>
             <br>
             <h3>Pratos do Chefe</h3>
             <a href="#article">Clique aqui</a>
@@ -111,7 +117,7 @@
 
       <div class="columnPagina" style="background-color: rgba(211, 207, 188, 0.884);">
             <br>
-            <i class="fa fa-user-circle-o" style="font-size:4vw;color:rgb(238, 238, 238)"></i>
+            <h2>👨‍🍳</h2>
             <br>
             <h3>Acerca do Chefe</h3>
             <a href="#aside">Clique aqui</a>
@@ -157,7 +163,7 @@
         <!--Conteúdo Principal // Main-->
 {% block main %}
     <h2>Cozinha de René Redzepi</h2>
-    <p><b>Prato da Nova Cozinha Nórdica da Autoria do Chefe confecionados no seu restaurante:</b></p>
+    <p><b style="color:saddlebrown">Prato da Nova Cozinha Nórdica da Autoria do Chefe confecionados no seu restaurante:</b></p>
 
     <div class="linha">
         <figure><img src='{% static "ProjetoFinalPW/images/noma/prato1.jpg" %}'  class="img" id="circular" alt=""></figure>
@@ -192,7 +198,7 @@
         <h2>Chefe René Redzepi</h2>
         <figure><img src='{% static "ProjetoFinalPW/images/noma/cozinheiro.jpg" %}' height="" witdh=""class="img" alt=""></figure>
         <a href="http://2.bp.blogspot.com/_GlnzWUyWCHs/TEoJl0g6vQI/AAAAAAAABko/uK2AjN7-XLs/s1600/nomarestaurantchefredzepi.jpg"><figcaption class="none">Cozinheiro</figcaption></a>
-        <a href="https://www.instagram.com/reneredzepinoma/"> 👨🏽‍🍳 Descubra mais </a>
+        <a href="https://www.instagram.com/reneredzepinoma/" > 👨🏽‍🍳 Descubra mais </a>
 
         <p id="descricao" style="background-color: rgb(199, 142, 57);"> <b>&#128198; Nascimento:</b> 16 de dezembro de 1977, Copenhaga, Dinamarca</p>
         <p id="descricao" style="background-color: rgb(199, 142, 57);"> <b>&#8987; Idade:</b> 43 anos</p>

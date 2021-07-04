@@ -6,8 +6,9 @@
     <meta charset="UTF-8">
     <title>Gastronomia no Mundo</title>
     <link rel="shortcut icon" type="image/x-icon" href="imagens/mundo.png"/>
-    <link href="{% static 'fontawesome_free/css/all.min.css' %}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="{% static 'ProjetoFinalPW/css/base.css' %}">
+
+    <link rel="shortcut icon" type="image/png" href="{% static 'ProjetoFinalPW/images/favicon/favicon.ico' %}"/>
 
     <style>
         .parallax {
@@ -91,7 +92,7 @@
                     <li><a href="{% url 'ProjetoFinalPW:nomaCozinha' %}"> Cozinha </a></li>
                 </ul>
             </li>
-            <li><a href="{% url 'singlepage:index' %}"> Mais Restaurantes </a></li>
+            <li><a href="{% url 'singlepage:index' %}"> 👨🏽‍🍳 Mais Restaurantes </a></li>
             <li><a href="#" style="width: 300px;">&#10133; Detalhes do Projeto</a>
                 <ul>
                       <li><a href="{% url 'ProjetoFinalPW:informacao' %}">Informações</a></li>
@@ -99,8 +100,8 @@
                 </ul>
             </li>
             <li><a href="{% url 'ProjetoFinalPW:formulario' %}">&#128203; Formulário</a></li>
-            <li><a href="{% url 'ProjetoFinalPW:contacto' %}"> Contacto </a></li>
-            <li><a href="{% url 'quizz:quizz' %}"> Quizz </a></li>
+            <li><a href="{% url 'ProjetoFinalPW:contacto' %}"> 📞 Contacto </a></li>
+            <li><a href="{% url 'quizz:quizz' %}"> ✏️Quizz </a></li>
 
         </ul>
     </nav>

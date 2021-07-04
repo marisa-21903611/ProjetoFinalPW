@@ -1,6 +1,7 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
+from .utils import get_plot
 
 from .models import Usuario, Comentario
 from .forms import UsuarioFormulario, ComentarioFormulario

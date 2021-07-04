@@ -5,59 +5,32 @@
 {% block head %}
         <title>Single Page</title>
         <style>
-            .parallax {
-            background-image: url('{% static "ProjetoFinalPW/images/Celler/celler_capa.jpg" %}');
-            min-height: 500px;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        .fixed{
-            height: 30px;
-            width: 100px;
-            position: absolute;
-            top: 20px;
-            right: 100px;
-        }
-        h1{
-          text-align: center;
-          font-size: 4vw;
-          font-family: 'New Tegomin', serif;
-        }
-        h2{
-            text-align: center;
-            color:rgb(228, 172, 99);
-        }
-        h3{
-            color:rgb(85, 82, 73);
-            text-align: center;
-        }
-        .header{
-            color :rgb(199, 142, 57);
-        }
-        .nav{
-            background-color: rgb(199, 142, 57);
-        }
-        .nav a{
-            background-color: rgb(199, 142, 57);
-        }
-        .footer{
-            background-color: rgb(199,142,57);
-        }
 
-        .linha{
-            display: flex;
-            flex-direction: row;
-            justify-content:center;
-        }
+            h1{
+                text-align: center;
+                font-size: 4vw;
+                font-family: 'New Tegomin', serif;
+            }
+            h2{
+                text-align: center;
+                font-family: 'New Tegomin', serif;
+                font-size: 3vw;
+            }
+            h3{
+                color:rgb(85, 82, 73);
+                text-align: center;
+            }
+            .nav a{
+                background-color: rgb(199, 142, 57);
+            }
 
-        div {
-            display:none;
-        }
-        body{
-            text-align: center;
-        }
+            div {
+                display:none;
+            }
+            body{
+                text-align: center;
+            }
+
         </style>
         <script>
 
@@ -93,22 +66,24 @@
 {% endblock head %}
 
 {% block body %}
-        <h1>Galeria</h1>
+        <b><h1 style="color: #555555">Outros Restaurantes 🍽️</h1></b>
 
-        <button data-section="section1">Eleven Madison Park</button>
-        <button data-section="section2">Osteria Francescana</button>
-        <button data-section="section3">Central</button>
-        <button data-section="section4">Maido</button>
-        <button data-section="section5">Gaggan</button>
+        <button data-section="section1" style="background-color: #286197;color: white" class="btn btn-madison">Eleven Madison Park</button>
+        <button data-section="section2" style="background-color:chocolate;color: white" class="btn btn-osteria">Osteria Francescana</button>
+        <button data-section="section3" style="background-color:darkgoldenrod;color: white" class="btn btn-central">Central</button>
+        <button data-section="section4" style="background-color:coral;color: white" class="btn btn-maido">Maido</button>
+        <button data-section="section5" style="background-color:rosybrown;color: white" class="btn btn-gaggan">Gaggan</button>
+        <button style="background-color:midnightblue"><a style="color: white" href="{% url 'ProjetoFinalPW:index' %}"> Home </a></button>
 
 
     <div id="section1">
-        <h1> Eleven Madison Park</h1>
+
+        <h2 style="color: #f5dd5d"> Eleven Madison Park</h2>
 
         <table border ="1" cellpadding="10%" cellspacing="5" bgcolor ="white">
             <colgroup><col span="7" bgcolor="aliceblue"></colgroup>
                 <caption>
-                    Informações
+                    <b><i>Informações acerca do Restaurante</i></b>
                 </caption>
 
                 <thead bgcolor ="lightblue">
@@ -120,36 +95,36 @@
                 <tbody>
 
                     <tr>
-                        <td style="text-align:center;"> História </td>
+                        <th style="text-align:center;"> História </th>
                         <td colspan ="2">O restaurante é propriedade do Chef Daniel Humm desde 2011 e durante esse tempo evoluiu bastante, tanto a nível alimentar como de experiência. Nosso menu de degustação na sala de jantar principal consiste em pratos inteiramente à base de plantas. Os hóspedes também podem visitar o bar para uma versão mais abreviada do menu de degustação, alguns lanches leves ou simplesmente para um coquetel ou uma taça de vinho.
                             Cada jantar comprado no Eleven Madison Park fornece cinco refeições para nova-iorquinos que sofrem de insegurança alimentar. Essas refeições são servidas no Eleven Madison Truck, operado por funcionários do restaurante, em parceria com a Rethink Food.
                         </td>
                     </tr>
 
                     <tr>
-                        <td rowspan="2" style="text-align:center;"> Localização</td>
-                        <td style="text-align:center;"> Região</td> <th>Nova Iorque</th>
+                        <th rowspan="2" style="text-align:center;"> Localização</th>
+                        <th style="text-align:center;"> Região</th> <td>Nova Iorque</td>
                         <tr>
-                            <td style="text-align:center;"> País</td> <th> Estados Unidos da América</th>
+                            <th style="text-align:center;"> País</th> <td> Estados Unidos da América</td>
                         </tr>
                     </tr>
 
                     <tr>
-                        <td style="text-align:center;"> Menu </td>
+                        <th style="text-align:center;"> Menu </th>
                         <td colspan ="2">
                             <a href="http://www.elevenmadisonpark.com/ourrestaurant/">Consulta dos menus</a>
                         </td>
                     </tr>
 
                     <tr>
-                        <td style="text-align:center;"> Contacto</td>
+                        <th style="text-align:center;"> Contacto</th>
                         <td colspan ="2">
                             <p> +1 212-889-0905 </p>
                         </td>
                     </tr>
 
                     <tr>
-                        <td style="text-align:center;"> Reservas e Encomendas</td>
+                        <th style="text-align:center;"> Reservas e Encomendas</th>
                         <td colspan ="2">
                             <a href="https://www.exploretock.com/elevenmadisonhome/?utm_source=search&utm_medium=place-actions&utm_content=reservations">Site para reservas e encomendas</a>
                         </td>
@@ -164,12 +139,12 @@
         </table>
     </div>
     <div id="section2">
-        <h1> Osteria Francescana</h1>
+        <h2 style="color:coral;"> Osteria Francescana</h2>
 
         <table border ="1" cellpadding="10%" cellspacing="5" bgcolor ="white">
             <colgroup><col span="7" bgcolor="aliceblue"></colgroup>
                 <caption>
-                    Informações
+                    <b><i>Informações acerca do Restaurante</i></b>
                 </caption>
 
                 <thead bgcolor ="lightblue">
@@ -181,34 +156,34 @@
                 <tbody>
 
                     <tr>
-                        <td style="text-align:center;"> História </td>
+                        <th style="text-align:center;"> História </th>
                         <td colspan ="2">A Osteria Francescana fica em Modena e foi distinguida por refletir a "constante criatividade" do chef Massimo Bottura, as suas "imensas capacidades e a feroz determinação para desafiar as possibilidades". O restaurante de Bottura, que comemorou em 2015 o vigésimo aniversário, teve dificuldades para se impor na cidade italiana com cerca de 200 mil habitantes, devido ao forte conservadorismo da Itália no que diz respeito às tradições culinárias.</td>
                     </tr>
 
                     <tr>
-                        <td rowspan="2" style="text-align:center;"> Localização</td>
-                        <td style="text-align:center;"> Região</td> <th>Moderna</th>
+                        <th rowspan="2" style="text-align:center;"> Localização</th>
+                        <th style="text-align:center;"> Região</th> <td>Moderna</td>
                         <tr>
-                            <td style="text-align:center;"> País</td> <th> Itália</th>
+                            <th style="text-align:center;"> País</th> <td> Itália</td>
                         </tr>
                     </tr>
 
                     <tr>
-                        <td style="text-align:center;"> Menu </td>
+                        <th style="text-align:center;"> Menu </th>
                         <td colspan ="2">
                             <a href="https://osteriafrancescana.it/menu/">Consulta dos menus</a>
                         </td>
                     </tr>
 
                     <tr>
-                        <td style="text-align:center;"> Contacto</td>
+                        <th style="text-align:center;"> Contacto</th>
                         <td colspan ="2">
                             <p> +39 059 223912 </p>
                         </td>
                     </tr>
 
                     <tr>
-                        <td style="text-align:center;"> Reservas e Encomendas</td>
+                        <th style="text-align:center;"> Reservas e Encomendas</th>
                         <td colspan ="2">
                             <a href="https://www.exploretock.com/elevenmadisonhome/?utm_source=search&utm_medium=place-actions&utm_content=reservations">Site para reservas e encomendas</a>
                         </td>
@@ -223,12 +198,12 @@
         </table>
     </div>
     <div id="section3">
-        <h1> Central</h1>
+        <h2 style="color: #583305"> Central</h2>
 
         <table border ="1" cellpadding="10%" cellspacing="5" bgcolor ="white">
             <colgroup><col span="7" bgcolor="aliceblue"></colgroup>
                 <caption>
-                    Informações
+                    <b><i>Informações acerca do Restaurante</i></b>
                 </caption>
 
                 <thead bgcolor ="lightblue">
@@ -240,35 +215,35 @@
                 <tbody>
 
                     <tr>
-                        <td style="text-align:center;"> História </td>
+                        <th style="text-align:center;"> História </th>
                         <td colspan ="2">A equipe Central, com o centro de pesquisa da Iniciativa Mater, forma um grupo de expedicionários cheios de curiosidade pelo Peru. Na Central estamos cientes da necessidade de nos conectarmos, e assumimos humildemente o grande desafio de conhecer e re-conhecer este lindo país cheio de insumos, paisagens, cultura e tradições, histórias únicas mas, acima de tudo, de quem vive e narrá-los.
                             Nossa equipe colaborativa trabalha muito para gerar conexões e tentar tornar visíveis os elementos que, no dia a dia, não podem ser vistos por todos. A expedição que empreendemos, o nosso início, não tem destino nem fim, mas centra-se no movimento constante, na observação e no respeito pela temporalidade e sazonalidade que a terra nos dita.</td>
                     </tr>
 
                     <tr>
-                        <td rowspan="2" style="text-align:center;"> Localização</td>
-                        <td style="text-align:center;"> Região</td> <th>Lima</th>
+                        <th rowspan="2" style="text-align:center;"> Localização</th>
+                        <th style="text-align:center;"> Região</th> <td>Lima</td>
                         <tr>
-                            <td style="text-align:center;"> País</td> <th> Peru</th>
+                            <th style="text-align:center;"> País</th> <td> Peru</td>
                         </tr>
                     </tr>
 
                     <tr>
-                        <td style="text-align:center;"> Menu </td>
+                        <th style="text-align:center;"> Menu </th>
                         <td colspan ="2">
                             <a href="https://osteriafrancescana.it/menu/">Consulta dos menus</a>
                         </td>
                     </tr>
 
                     <tr>
-                        <td style="text-align:center;"> Contacto</td>
+                        <th style="text-align:center;"> Contacto</th>
                         <td colspan ="2">
                             <p> +51 1 2428515 </p>
                         </td>
                     </tr>
 
                     <tr>
-                        <td style="text-align:center;"> Reservas e Encomendas</td>
+                        <th style="text-align:center;"> Reservas e Encomendas</th>
                         <td colspan ="2">
                             <a href="centralrestaurante.com.pe">Site para reservas e encomendas</a>
                         </td>
@@ -283,11 +258,11 @@
         </table>
     </div>
     <div id="section4">
-        <h1> Maido</h1>
+        <h2 style="color:brown;"> Maido</h2>
         <table border ="1" cellpadding="10%" cellspacing="5" bgcolor ="white">
             <colgroup><col span="7" bgcolor="aliceblue"></colgroup>
-                <caption>
-                    Informações
+               <caption>
+                    <b><i>Informações acerca do Restaurante</i></b>
                 </caption>
 
                 <thead bgcolor ="lightblue">
@@ -299,36 +274,36 @@
                 <tbody>
 
                     <tr>
-                        <td style="text-align:center;"> História </td>
+                        <th style="text-align:center;"> História </th>
                         <td colspan ="2">
                             Maido, que significa "bem-vindo" em japonês, é a casa do chef Mitsuharu 'Micha' Tsumura. O restaurante traz influências japonesas e peruanas e pratos como cachorro-quente de peixe e arroz de ouriço do mar e um balcão de sushi clássico.
                         </td>
                     </tr>
 
                     <tr>
-                        <td rowspan="2" style="text-align:center;"> Localização</td>
-                        <td style="text-align:center;"> Região</td> <th>Lima</th>
+                        <th rowspan="2" style="text-align:center;"> Localização</th>
+                        <td style="text-align:center;"> Região</td> <td>Lima</td>
                         <tr>
-                            <td style="text-align:center;"> País</td> <th> Peru</th>
+                            <td style="text-align:center;"> País</td> <td> Peru</td>
                         </tr>
                     </tr>
 
                     <tr>
-                        <td style="text-align:center;"> Menu </td>
+                        <th style="text-align:center;"> Menu </th>
                         <td colspan ="2">
                             <a href="https://www.tripadvisor.pt/Restaurant_Review-g294316-d1798176-Reviews-Central_Restaurante-Lima_Lima_Region.html">Consulta dos menus</a>
                         </td>
                     </tr>
 
                     <tr>
-                        <td style="text-align:center;"> Contacto</td>
+                        <th style="text-align:center;"> Contacto</th>
                         <td colspan ="2">
                             <p> +51 1 3135100 </p>
                         </td>
                     </tr>
 
                     <tr>
-                        <td style="text-align:center;"> Reservas e Encomendas</td>
+                        <th style="text-align:center;"> Reservas e Encomendas</th>
                         <td colspan ="2">
                             <a href="meitre.com">Site para reservas e encomendas</a>
                         </td>
@@ -343,11 +318,11 @@
         </table>
     </div>
     <div id="section5">
-        <h1> Gaggan</h1>
+        <h2 style="color: #286197"> Gaggan</h2>
         <table border ="1" cellpadding="10%" cellspacing="5" bgcolor ="white">
             <colgroup><col span="7" bgcolor="aliceblue"></colgroup>
                 <caption>
-                    Informações
+                    <b><i>Informações acerca do Restaurante</i></b>
                 </caption>
 
                 <thead bgcolor ="lightblue">
@@ -359,36 +334,36 @@
                 <tbody>
 
                     <tr>
-                        <td style="text-align:center;"> História </td>
+                        <th style="text-align:center;"> História </th>
                         <td colspan ="2">
                             Gaggan era um restaurante em Bangkok , Tailândia dirigido pelo chef indiano Gaggan Anand de 2010 a 2019. Ele ficou em primeiro lugar entre os 50 melhores restaurantes da Ásia e sétimo no ranking geral dos 50 melhores restaurantes do mundo de 2015 a 2018. O restaurante também ganhou duas estrelas Michelin na primeira edição do Guia Michelin da Tailândia.
                         </td>
                     </tr>
 
                     <tr>
-                        <td rowspan="2" style="text-align:center;"> Localização</td>
-                        <td style="text-align:center;"> Região</td> <th>Bangkok</th>
+                        <th rowspan="2" style="text-align:center;"> Localização</th>
+                        <th style="text-align:center;"> Região</th> <td>Bangkok</td>
                         <tr>
-                            <td style="text-align:center;"> País</td> <th> Tailândia</th>
+                            <th style="text-align:center;"> País</th> <td> Tailândia</td>
                         </tr>
                     </tr>
 
                     <tr>
-                        <td style="text-align:center;"> Menu </td>
+                        <th style="text-align:center;"> Menu </th>
                         <td colspan ="2">
                             <a href="https://gaggananand.com/wp-content/uploads/2021/01/A-La-Carte-Menu-final-Food-_-Bev.pdf">Consulta dos menus</a>
                         </td>
                     </tr>
 
                     <tr>
-                        <td style="text-align:center;"> Contacto</td>
+                        <th style="text-align:center;"> Contacto</th>
                         <td colspan ="2">
                             <p> +66 98 883 1022 </p>
                         </td>
                     </tr>
 
                     <tr>
-                        <td style="text-align:center;"> Reservas e Encomendas</td>
+                        <th style="text-align:center;"> Reservas e Encomendas</th>
                         <td colspan ="2">
                             <a href="gaggananand.com">Site para reservas e encomendas</a>
                         </td>
@@ -403,29 +378,3 @@
         </table>
     </div>
 {% endblock body %}
-
-{% block nav %}
-
-{% endblock nav %}
-
-{% block header %}
-    <h1>Galeria</h1>
-{% endblock header %}
-
-{% block itemAuxiliar %}
-{% endblock itemAuxiliar %}
-
-{% block section %}
-{% endblock section %}
-
-{% block main %}
-{% endblock main %}
-
-{% block aside %}
-{% endblock aside %}
-
-{% block body2 %}
-{% endblock body2 %}
-
-{% block footer %}
-{% endblock footer %}

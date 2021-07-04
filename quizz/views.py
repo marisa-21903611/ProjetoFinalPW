@@ -3,6 +3,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from quizz.forms import NovoQuizzFormulario, NovaPerguntaFormulario
 from quizz.models import Resposta, Pergunta, Quizz, Tentativa
+from .utils import get_plot
 # Create your views here.
 
 def quizz_view(request):
@@ -50,5 +51,10 @@ def pontuacao_view(request):
         if tentativa.usuario == user:
             contagem = contagem+1
 
-    context = { 'quizz': quizzes, 'tentativas': tentativas,'contagem':contagem}
+    primeira = [primeira.submetido.strftime("%d-%m-%Y, %H:%M:%S") for primeira in tentativas if primeira.usuario == user]
+    segunda = [segunda.classificacao for segunda in tentativas if segunda.usuario == user]
+
+    grafico = get_plot(primeira, segunda)
+
+    context = { 'quizz': quizzes, 'tentativas': tentativas,'contagem':contagem, 'grafico':grafico}
     return render (request, "quizz/pontuacao.html", context)

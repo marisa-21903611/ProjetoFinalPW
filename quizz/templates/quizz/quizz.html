@@ -43,8 +43,10 @@
 {% block nav %}
     <a href="{% url 'ProjetoFinalPW:informacao' %}" target="_blank">&#10067; Informações </a>
     <a href="{% url 'ProjetoFinalPW:formulario' %}" target="_blank">&#128203; Formulário </a>
+    <a href="{% url 'ProjetoFinalPW:mapa' %}" target="_blank">🗺️ Mapa do Website</a>
     <a href="{% url 'ProjetoFinalPW:contacto' %}">📞 Contacto </a>
     <b><a href="{% url 'quizz:quizz' %}">✍️ Quizz </a></b>
+    <a href="{% url 'ProjetoFinalPW:index' %}" target="_blank">&#128281; Home </a>
 {% endblock nav %}
 
 
@@ -69,11 +71,7 @@
                            {% else %}
                                 value = "0"
                            {% endif%}
-                                count = 1
                                 type="radio" style="margin-right: 5%">
-                                {% if count.isequal == 1 %}
-                                    <input type="radio" style="margin-right: 10%">
-                                {% endif %}
                     {{ resposta.textoResposta}}
                     </div>
                 {% endfor %}

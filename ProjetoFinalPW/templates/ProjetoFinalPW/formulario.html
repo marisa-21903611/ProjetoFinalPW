@@ -29,6 +29,9 @@
         fieldset{
             text-align: center;
         }
+        main{
+            text-align: center;
+        }
     </style>
 
     <script>
@@ -64,7 +67,7 @@
     <!--Header-->
 {% block header %}
     <h1><b>Formulário</b></h1>
-    <button onclick="info()">Clicar aqui!</button>
+    <button onclick="info()" style="background-color:rgb(10, 51, 90);color: white;">Clicar aqui!</button>
 {% endblock header %}
 
         <!--Conteúdo Principal // Main-->
@@ -79,17 +82,17 @@
                 {{form.as_p}}
 
                 <p></p>
-                <input class ="butao" type="submit" value="Enviar">
+                <input class ="botao" type="submit" value="Enviar" style="background-color:rgb(10, 51, 90);color: white;">
             </div>
         </div>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
       </form>
+
+    {% if grafico %}
+        <img src ="data:imagem/png;base64, {{grafico|safe}}image">
+    {% endif %}
 {% endblock main %}
 
 {% block body2 %}
     <div class="parallax"></div>
 {% endblock body2 %}
-
-   <!--Footer-->
-{% block footer %}
-    <p> Universade Lusófona de Humanidades e Tecnologias </p>
-{% endblock footer %}

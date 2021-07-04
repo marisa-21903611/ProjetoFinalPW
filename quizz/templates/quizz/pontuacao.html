@@ -44,14 +44,15 @@
 {% block nav %}
     <a href="{% url 'ProjetoFinalPW:informacao' %}" target="_blank">&#10067; Informações </a>
     <a href="{% url 'ProjetoFinalPW:formulario' %}" target="_blank">&#128203; Formulário </a>
+    <a href="{% url 'ProjetoFinalPW:mapa' %}" target="_blank">🗺️ Mapa do Website</a>
     <a href="{% url 'ProjetoFinalPW:contacto' %}">📞 Contacto </a>
     <b><a href="{% url 'quizz:quizz' %}">✍️ Quizz </a></b>
+    <a href="{% url 'ProjetoFinalPW:index' %}" target="_blank">&#128281; Home </a>
 {% endblock nav %}
-
 
 {% block main %}
     {% if user.is_authenticated %}
-        {% if contagem == 0 %}
+
             <p> Ainda não existem pontuações.</p>
             <p> Por favor realize o Quizz &#128521;.</p>
 
@@ -60,11 +61,16 @@
                     {% if tentativa.usuario == request.user %}
                         {% if tentativa.quizz == quizz %}
                             {{ quizz.titulo }}
-                            {{ tentativa.pontos }}
+                            {{ tentativa.classificacao }}
+                            {{ tentativa.submetido }}
                         {% endif %}
                     {% endif %}
                 {% endfor %}
             {% endfor %}
+
+            {% if grafico %}
+                <img src ="data:image/png;base64, {{grafico|safe}}image">
+      
         {% endif %}
 
     {% else %}
