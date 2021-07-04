@@ -622,8 +622,9 @@ flex-wrap: wrap;
 
   /* Classe do Quizz */
   .botao {
+    align-content: center;
     max-width: 94px;
-    background:blue;
+    background:navajowhite;
     color: white;
     padding: 0.6rem 1.3rem;
     text-decoration: none;
